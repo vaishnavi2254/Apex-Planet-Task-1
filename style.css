@@ -1,0 +1,343 @@
+/* ===== Reset & Base Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f6fa;
+    color: #333;
+}
+
+#dueDate {
+    padding: 6px 12px;
+    margin-left: 6px;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Optional: Hover effect */
+#dueDate:hover {
+    background-color: #e85c5c;
+}
+
+/* ===== Sidebar Styles ===== */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background-color: #ff6b6b;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-item {
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.logout {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.logout:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Main Content Styles ===== */
+.main-content {
+    margin-left: 260px;
+    padding: 30px;
+}
+
+/* ===== Top Bar ===== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.top-bar2 input {
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.top-bar2 button {
+    padding: 6px 12px;
+    margin-left: 6px;
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ===== TaskList ===== */
+
+.top-bar2 button:hover {
+    background-color: #e65c5c;
+}
+
+ul#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul#taskList li {
+    background: #f2f2f2;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+/* ===== Delete Button ===== */
+
+.delete-btn {
+    background: crimson;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Task text and checkbox on the left */
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Completed task style */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.6;
+}
+
+.delete-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+
+}
+
+/* ===== Greeting ===== */
+.greeting {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ===== Task Board ===== */
+.task-board {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+}
+
+.card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+/* ===== Contact Form ===== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group span {
+    color: red;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    transition: border 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6b6b;
+    outline: none;
+}
+
+.card form button {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card form button:hover {
+    background-color: #e55c5c;
+}
+
+.error-msg {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    display: none;
+}
+
+.success-msg {
+    color: green;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+
+/* ===== Task Items ===== */
+.task-item {
+    background-color: #f0f0f0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    position: relative;
+    font-size: 14px;
+}
+
+.task-item small {
+    color: #666;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Remove button */
+.task-item .remove-task {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    color: #d63031;
+    font-size: 16px;
+    user-select: none;
+}
+
+.task-item .remove-task:hover {
+    color: #b71c1c;
+}
+
+ul#taskList li {
+    background: #f2f2f2;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar {
+        position: static;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .task-board {
+        flex-direction: column;
+    }
+}
